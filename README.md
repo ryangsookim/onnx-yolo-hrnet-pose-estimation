@@ -1,6 +1,3 @@
-### README.md (ONNXRuntime 기반 코드 - 한국어)
-
-```markdown
 # ONNX YOLO + HRNet 포즈 추정
 
 이 저장소는 ONNXRuntime을 사용하여 YOLO 기반 객체 탐지와 HRNet 기반 다중 인물 포즈 추정을 수행하는 방법을 시연합니다. 이 프로젝트는 동영상 입력을 처리하고 객체 탐지 결과와 인물 포즈 추정을 시각화하는 데 중점을 둡니다.
