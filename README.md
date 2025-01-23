@@ -96,9 +96,4 @@ HRNet_model_path = "models/hrnet.onnx"
 - Use high-quality input videos for better pose estimation results.
 - This project is for educational purposes and demonstrates the integration of ONNXRuntime for inference.
 
-## License
-
-This project is open-source and available under the MIT License. See the [LICENSE](LICENSE) file for more details.
-```
-
 This `README.md` provides a clear explanation of the repository's purpose, setup instructions, and usage, ensuring easy understanding for any user.
