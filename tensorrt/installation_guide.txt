@@ -1,0 +1,10 @@
+# nvidia-smi로 드라이버 버전 확인 후 적절한 cuda 설치하기
+# cuda 설치하기 (12버전 추천)
+# cuda 설치 후 터미널 창에 nvcc --version 으로 정상설치 확인
+
+pip install --upgrade pip
+pip install pycuda
+pip install nvidia-pyindex
+pip install nvidia-tensorrt
+
+pip install --upgrade nvidia-tensorrt
