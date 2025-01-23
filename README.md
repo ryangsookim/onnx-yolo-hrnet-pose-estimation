@@ -41,6 +41,17 @@ pip install -r requirements.txt
 └── README.md                    # 프로젝트 문서
 ```
 
+## 모델 및 동영상 다운로드
+
+모델 파일과 예제 동영상은 아래 Google Drive 링크에서 다운로드할 수 있습니다:
+
+[모델 및 동영상 다운로드 링크](https://drive.google.com/file/d/1wJr_xSIfPggeNzJhBKIsNYzgN5--fT7j/view?usp=drive_link)
+
+다운로드 후, 다음과 같이 디렉토리에 배치해주세요:
+
+- `yolov7-tiny.onnx` 및 `hrnet.onnx`를 `models/` 디렉토리에 저장
+- `le_sserafim.mp4`를 `source/` 디렉토리에 저장
+
 ## 사용 방법
 
 1. **저장소 클론**:
@@ -55,9 +66,8 @@ pip install -r requirements.txt
    pip install -r requirements.txt
    ```
 
-3. **모델과 동영상 준비**:
-   - ONNX 모델(`yolov7-tiny.onnx`와 `hrnet.onnx`)을 다운로드하여 `models/` 디렉토리에 저장합니다.
-   - 처리할 동영상 파일을 `source/` 디렉토리에 저장하거나, 스크립트의 `video_path` 경로를 수정합니다.
+3. **모델 및 동영상 준비**:
+   위의 Google Drive 링크에서 파일을 다운로드한 후, `models/`와 `source/` 디렉토리에 배치합니다.
 
 4. **스크립트 실행**:
    다음 명령으로 스크립트를 실행합니다:
@@ -100,5 +110,3 @@ HRNet_model_path = "models/hrnet.onnx"
 
 이 프로젝트는 오픈 소스이며, MIT 라이선스에 따라 제공됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 ``` 
-
-이 `README.md`는 프로젝트의 목적, 설정 방법, 사용법 등을 한국어로 명확히 설명하며, 초보 사용자도 쉽게 이해할 수 있도록 작성되었습니다.
