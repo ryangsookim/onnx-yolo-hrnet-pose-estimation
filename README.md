@@ -1,5 +1,3 @@
-### README.md 원본 (ONNXRuntime 기반 코드)
-
 ```markdown
 # ONNX YOLO + HRNet Pose Estimation
 
