@@ -1,4 +1,3 @@
-```markdown
 # ONNX YOLO + HRNet Pose Estimation
 
 This repository demonstrates how to perform object detection using YOLO and multi-person pose estimation using HRNet with ONNXRuntime. The project is designed to process video input and visualize both object detection results and human pose estimations.
