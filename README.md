@@ -1,99 +1,107 @@
-# ONNX YOLO + HRNet Pose Estimation
+### README.md (ONNXRuntime 기반 코드 - 한국어)
 
-This repository demonstrates how to perform object detection using YOLO and multi-person pose estimation using HRNet with ONNXRuntime. The project is designed to process video input and visualize both object detection results and human pose estimations.
+```markdown
+# ONNX YOLO + HRNet 포즈 추정
 
-## Features
+이 저장소는 ONNXRuntime을 사용하여 YOLO 기반 객체 탐지와 HRNet 기반 다중 인물 포즈 추정을 수행하는 방법을 시연합니다. 이 프로젝트는 동영상 입력을 처리하고 객체 탐지 결과와 인물 포즈 추정을 시각화하는 데 중점을 둡니다.
 
-- **YOLO Object Detection**: Detect objects in video frames using a YOLO ONNX model.
-- **HRNet Pose Estimation**: Perform multi-person pose estimation using an HRNet ONNX model.
-- **Visualization**: Draw bounding boxes, skeletons, and keypoints on video frames.
-- **Real-Time Processing**: Efficient and real-time video processing.
+## 주요 기능
 
-## Requirements
+- **YOLO 객체 탐지**: YOLO ONNX 모델을 사용하여 동영상 프레임에서 객체를 탐지합니다.
+- **HRNet 포즈 추정**: HRNet ONNX 모델을 사용하여 다중 인물 포즈를 추정합니다.
+- **시각화**: 바운딩 박스, 스켈레톤, 키포인트를 동영상 프레임에 시각화합니다.
+- **실시간 처리**: 효율적이고 실시간으로 동영상을 처리합니다.
 
-To run this project, you'll need the following dependencies:
+## 요구 사항
 
-- Python 3.8+
+다음 의존성을 설치해야 합니다:
+
+- Python 3.8 이상
 - OpenCV
 - NumPy
 - ONNXRuntime
 - PyTorch
 - Matplotlib
 
-Install dependencies using the provided `requirements.txt` file:
+`requirements.txt` 파일을 사용하여 의존성을 설치할 수 있습니다:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Directory Structure
+## 디렉토리 구조
 
 ```plaintext
 .
 ├── models/
-│   ├── yolov7-tiny.onnx         # Pre-trained YOLO ONNX model
-│   ├── hrnet.onnx               # Pre-trained HRNet ONNX model
+│   ├── yolov7-tiny.onnx         # 사전 학습된 YOLO ONNX 모델
+│   ├── hrnet.onnx               # 사전 학습된 HRNet ONNX 모델
 ├── source/
-│   └── le_sserafim.mp4          # Example video for processing
-├── coco2017.txt                 # COCO class labels
-├── main.py                      # Main script to run the video processing
-├── requirements.txt             # Required Python libraries
-└── README.md                    # Project documentation
+│   └── le_sserafim.mp4          # 예제 동영상
+├── coco2017.txt                 # COCO 클래스 레이블
+├── main.py                      # 동영상 처리 스크립트
+├── requirements.txt             # Python 의존성 파일
+└── README.md                    # 프로젝트 문서
 ```
 
-## Usage
+## 사용 방법
 
-1. **Clone the Repository**:
+1. **저장소 클론**:
    ```bash
    git clone https://github.com/ryangsookim/onnx-yolo-hrnet-pose-estimation.git
    cd onnx-yolo-hrnet-pose-estimation
    ```
 
-2. **Prepare the Environment**:
-   Install all dependencies:
+2. **환경 설정**:
+   의존성 설치:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Place Models and Video**:
-   - Download or place the ONNX models (`yolov7-tiny.onnx` and `hrnet.onnx`) into the `models/` directory.
-   - Place your video file in the `source/` directory or update the `video_path` in the script.
+3. **모델과 동영상 준비**:
+   - ONNX 모델(`yolov7-tiny.onnx`와 `hrnet.onnx`)을 다운로드하여 `models/` 디렉토리에 저장합니다.
+   - 처리할 동영상 파일을 `source/` 디렉토리에 저장하거나, 스크립트의 `video_path` 경로를 수정합니다.
 
-4. **Run the Script**:
-   Execute the script to process a video:
+4. **스크립트 실행**:
+   다음 명령으로 스크립트를 실행합니다:
    ```bash
    python main.py
    ```
 
-5. **Expected Output**:
-   - The video frames will be displayed in a window with detected objects, bounding boxes, and skeletons drawn.
-   - Press `q` to quit the visualization.
+5. **결과 확인**:
+   - 탐지된 객체와 스켈레톤이 표시된 동영상 프레임이 창에 나타납니다.
+   - `q` 키를 누르면 실행을 종료할 수 있습니다.
 
-## Models
+## 모델
 
-- **YOLOv7-Tiny**: Optimized for real-time object detection.
-- **HRNet**: High-resolution network for accurate pose estimation.
+- **YOLOv7-Tiny**: 실시간 객체 탐지를 위해 최적화된 경량 모델.
+- **HRNet**: 정확한 포즈 추정을 위한 고해상도 네트워크.
 
-## Example
+## 예제
 
-The following example uses the provided `le_sserafim.mp4` video and the models in the `models/` directory.
+아래는 제공된 `le_sserafim.mp4` 동영상과 `models/` 디렉토리의 모델을 사용하는 예제입니다.
 
 ```python
-# Modify these paths in main.py
+# main.py에서 경로를 수정합니다.
 video_path = "source/le_sserafim.mp4"
 YOLO_model_path = "models/yolov7-tiny.onnx"
 HRNet_model_path = "models/hrnet.onnx"
 ```
 
-## Results
+## 결과
 
-- Detected objects are highlighted with bounding boxes.
-- Human poses are visualized with keypoints and skeletons.
+- 탐지된 객체는 바운딩 박스로 강조 표시됩니다.
+- 사람의 포즈는 키포인트와 스켈레톤으로 시각화됩니다.
 
-## Notes
+## 참고 사항
 
-- Ensure the ONNX models are downloaded and placed correctly in the `models/` folder.
-- Use high-quality input videos for better pose estimation results.
-- This project is for educational purposes and demonstrates the integration of ONNXRuntime for inference.
+- ONNX 모델이 `models/` 디렉토리에 올바르게 배치되었는지 확인하세요.
+- 더 나은 포즈 추정 결과를 위해 고품질의 입력 동영상을 사용하는 것이 좋습니다.
+- 이 프로젝트는 교육 목적으로 제공되며 ONNXRuntime을 활용한 추론 통합 방법을 시연합니다.
 
-This `README.md` provides a clear explanation of the repository's purpose, setup instructions, and usage, ensuring easy understanding for any user.
+## 라이선스
+
+이 프로젝트는 오픈 소스이며, MIT 라이선스에 따라 제공됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+``` 
+
+이 `README.md`는 프로젝트의 목적, 설정 방법, 사용법 등을 한국어로 명확히 설명하며, 초보 사용자도 쉽게 이해할 수 있도록 작성되었습니다.
